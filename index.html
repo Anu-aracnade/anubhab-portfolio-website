@@ -13,10 +13,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <div>
+      <video autoplay loop muted playsinline class="bg-video">
+        <source src="assets\portfolio_background_video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <header
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px;
+      "
+    >
       <div class="Home"><a href="">Anubhab Pathak</a></div>
       <nav class="nav_buttons">
-        <ul>
+        <ul class="nav_setting">
           <li><a href="">About Me</a></li>
           <li><a href="">Skills</a></li>
           <li><a href="">Projects</a></li>
@@ -26,15 +38,18 @@
     </header>
     <main>
       <section class="hero">
-        <h1>Hi, I'm Anubhab Pathak👋</h1>
-        <p>
-          I'm a Computer Science student at Chandigarh University passionate
-          about Web Development, Python, Cybersecurity, AI, and building
-          real-world projects.Currently focused on creating projects,
-          contributing to communities, and growing into a full-stack developer.
-        </p>
-        <div>
-          <dl>
+        <div class="hero_details_card">
+          <h1 style="padding-top: 8px">Hi, I'm Anubhab Pathak👋</h1>
+          <p style="padding-bottom: 8px;">
+            I'm a Computer Science student at Chandigarh University passionate
+            about Web Development, Python, Cybersecurity, AI, and building
+            real-world projects.Currently focused on creating projects,
+            contributing to communities, and growing into a full-stack
+            developer.
+          </p>
+        </div>
+        <div >
+          <dl class="hero_details_list_grid">
             <div>
               <dt>Location</dt>
               <dd>Mohali, Punjab</dd>
