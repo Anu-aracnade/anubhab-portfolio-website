@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anubhab Pathak — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -218,23 +225,51 @@
         </div>
         <div class="viewer_details">
           <form action="" novalidate>
-          <div>
             <div>
-              <label for="viewer_name">Name</label>
-              <input type="text" name="name" id="contact-name" placeholder="Your name">
+              <div>
+                <label for="viewer_name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="contact-name"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label for="viewer_email">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email-address"
+                  placeholder="you@domain"
+                />
+              </div>
+              <div>
+                <label for="viewer_project">Your Project</label>
+                <textarea
+                  name="message"
+                  id="project_message"
+                  placeholder="Tell me about your project"
+                ></textarea>
+              </div>
             </div>
-            <div>
-              <label for="viewer_email">Email</label>
-              <input type="text" name="email" id="email-address" placeholder="you@domain">
-            </div>
-            <div>
-              <label for="viewer_project">Your Project</label>
-              <textarea name="message" id="project_message" placeholder="Tell me about your project"></textarea>
-            </div>
-          </div>
           </form>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer_division">
+        <div class="my_details_footer">
+          <span>Designed and built by Anubhab Pathak</span>
+          <span>Mohali,Punjab</span>
+          <a href="">Privacy</a>
+        </div>
+        <div class="my_contacts_footer">
+          <a href="">Gmail</a>
+          <a href="">LinkedIn</a>
+          <a href="">GitHub</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
