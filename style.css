@@ -41,10 +41,16 @@ h2 {
   font-family: "Permanent Marker", sans-serif;
   font-size: 50px;
 }
+h3{
+  font-family: "Poppins";
+}
 p {
   padding-bottom: 8px;
   font-family: "Cormorant";
   font-size: 20px;
+}
+ul{
+  list-style-type: none;
 }
 nav {
   display: flex;
@@ -161,16 +167,86 @@ nav ul li {
 } */
 
 /* -----About Me Section----- */
-.About{
+.About {
   padding: 450px 32px 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 75%;  
+  width: 75%;
 }
 .About_head {
   padding-bottom: 22px;
 }
 .About_para p {
   padding-bottom: 16px;
+}
+/* -----Skills Section------ */
+.Skills {
+  padding: 120px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.skills_grid_list {
+  padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  width: 83%;
+}
+.skills_grid_list_parts {
+  padding-top: 16px;
+  padding-bottom: 47px;
+  display: grid;
+  grid-template-columns: auto auto;
+  position: relative;
+  width: 100%;
+  column-gap: 260px;
+  opacity: 70%;
+}
+.skills_grid_list div div dt {
+  font-weight: bold;
+  font-size: 29px;
+  font-family: "Cormorant","Inter",sans-serif;
+}
+/* underline-element in the grid */
+.skills_grid_list div div dt::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -4px;
+  left: 0px;
+  background-color:rgb(255, 255, 255);
+}
+/* -----Experience & Education----- */
+.Experience__Education {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+.Projects{
+  padding-top: 100px;
+}
+.Projects div ul {
+  padding: 0px 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 83%;
+}
+.in_btw_flex {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* -----Comtacts----- */
+.contacts {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
 }
