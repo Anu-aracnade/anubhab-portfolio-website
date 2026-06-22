@@ -1,66 +1,119 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .bg-video {
-    position:fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 body {
-    font-family: 'Inter',sans-serif;
-    color:rgb(255, 255, 255);
-    line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.6;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
+  /* stick it to the top */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  /* Semi-transparent background & The foggy/blur effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 h1 {
-    font-family: 'Poppins','Segoe UI';
+  font-family: "Permanent Marker", "Poppins", "Segoe UI";
+  font-size: 55px;
 }
 h2 {
-    font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 nav {
-    display:flex;
-    flex-direction: row;
-    justify-content:flex-end ;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 8px;
+  color: white;
 }
 .nav_setting {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+/* LVHA Rule for anchor links and Underline slide effect*/
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+/* Underline effects */
+a::after {
+  content: ""; /*intialization for the browser*/
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover::after {
+  color: inherit;
+  transform: scaleX(1);
+}
+a:active {
+  color: inherit;
+}
+
 nav ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
+  display: flex;
+  flex-direction: row;
 }
 .hero {
-    padding:32px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .hero_details_card {
-    display: block;
-    width: 50%;
+  display: block;
+  width: 50%;
 }
 .hero_details_list_grid {
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    column-gap: 64px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  column-gap: 64px;
 }
-.hero_details_list_grid div{
-padding: 16px;
-padding-left: 0%;
+.hero_details_list_grid div {
+  padding: 16px;
+  padding-left: 0%;
 }
-.hero_details_list_grid div dt{
-    font-weight: bold;
+.hero_details_list_grid div dt {
+  font-weight: bold;
 }
