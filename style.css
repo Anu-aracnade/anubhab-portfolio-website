@@ -38,7 +38,13 @@ h1 {
   font-size: 55px;
 }
 h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 50px;
+}
+p {
+  padding-bottom: 8px;
+  font-family: "Cormorant";
+  font-size: 20px;
 }
 nav {
   display: flex;
@@ -94,15 +100,24 @@ nav ul li {
   display: flex;
   flex-direction: row;
 }
+/* Hero Section */
 .hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero_details_whole {
   padding: 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 0 0 50%;
+  width: 50px;
 }
 .hero_details_card {
   display: block;
-  width: 50%;
+  width: 100%;
 }
 .hero_details_list_grid {
   display: grid;
@@ -116,4 +131,46 @@ nav ul li {
 }
 .hero_details_list_grid div dt {
   font-weight: bold;
+}
+.My_image_container {
+  position: absolute; /* Detaches image from normal section bounds */
+  right: 50px; /* Aligns it to the right edge of the hero */
+  top: 70%; /* Pushes the top edge down to the exact middle */
+  width: 40%; /* Controls the horizontal space it occupies */
+  z-index: 10; /* Places it on top of the next section */
+}
+.My_image_styles {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+/* ----- New scroll-effect property------ We will use JAVA-script(better-approach) to do this later
+.glideUp_scroll_effect {
+  animation: glideUp linear both;
+  animation-timeline: scroll(root); ----  Links animation to the page scroll 
+  animation-range: entry 0% exit 100%; ---- Plays while entering and leaving viewport 
+}*/
+/* @keyframes glideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateX(-80px);
+  }
+} */
+
+/* -----About Me Section----- */
+.About{
+  padding: 450px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75%;  
+}
+.About_head {
+  padding-bottom: 22px;
+}
+.About_para p {
+  padding-bottom: 16px;
 }
