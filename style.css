@@ -41,7 +41,7 @@ h2 {
   font-family: "Permanent Marker", sans-serif;
   font-size: 50px;
 }
-h3{
+h3 {
   font-family: "Poppins";
 }
 p {
@@ -49,7 +49,7 @@ p {
   font-family: "Cormorant";
   font-size: 20px;
 }
-ul{
+ul {
   list-style-type: none;
 }
 nav {
@@ -192,11 +192,11 @@ nav ul li {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
-  width: 83%;
+  width: 90%;
 }
 .skills_grid_list_parts {
   padding-top: 16px;
-  padding-bottom: 47px;
+  padding-bottom: 30px;
   display: grid;
   grid-template-columns: auto auto;
   position: relative;
@@ -204,10 +204,26 @@ nav ul li {
   column-gap: 260px;
   opacity: 70%;
 }
+.skills_grid_list_parts dd {
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 6px 12px;
+  width: max-content;
+  margin: 0;
+  margin-bottom: 8px;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+.skills_grid_list_parts dd:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
 .skills_grid_list div div dt {
   font-weight: bold;
   font-size: 29px;
-  font-family: "Cormorant","Inter",sans-serif;
+  font-family: "Cormorant", "Inter", sans-serif;
 }
 /* underline-element in the grid */
 .skills_grid_list div div dt::after {
@@ -217,7 +233,7 @@ nav ul li {
   height: 1px;
   bottom: -4px;
   left: 0px;
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 /* -----Experience & Education----- */
 .Experience__Education {
@@ -227,7 +243,7 @@ nav ul li {
   justify-content: space-between;
   column-gap: 20px;
 }
-.Projects{
+.Projects {
   padding-top: 100px;
 }
 .Projects div ul {
