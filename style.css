@@ -425,8 +425,6 @@ nav ul li {
 /* Target all mobile screens */
 @media screen and (max-width: 630px) {
   /* 1. Target every <section> element or main structural wrapper */
-  body,
-  html,
   main,
   section,
   header,
@@ -443,8 +441,13 @@ nav ul li {
 }
 /* --------For Mobile-------- */
 @media screen and (max-width: 700px) and (orientation: portrait) {
-    .hero {
-    padding-top: 0px;
+  header {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 10px 6px 6px !important;
+  }  
+  .hero {
+    padding-top: 32px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -524,5 +527,79 @@ nav ul li {
   }
   .my_contacts_footer {
     gap: 8px;
+  }
+}
+/* ------Hamburger Nav button (Mobile-View)-------- */
+
+/* Helper class used by JavaScript to freeze page scroll */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ==========================================
+   NAVIGATION LAYOUT (DESKTOP DEFAULT)
+   ========================================== */
+.hamburger {
+  display: none;
+  background: none;
+  padding: 0;
+  background: transparent !important;
+  outline: none; /* Removes outline boxes on click/hover */
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE VIEW (768px & Smaller)
+   ========================================== */
+@media (max-width: 768px) {
+  .hamburger { 
+    display: block; 
+  }
+  .nav_setting {
+    position: fixed; 
+    padding:0;
+    margin: 0;
+    top: -100vh; /* Keeps menu hidden above the viewport */
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    background-color: rgba(33, 33, 33, 0.98); 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    z-index: 99;
+  }
+  /* Drop-down trigger from the top */
+  .nav_setting.active { 
+    top: 0; 
+  }
+  .nav-item { 
+    margin: 1.5rem 0; 
+    margin-left: 0; /* Resets desktop margin spacing */
+  }
+  .nav-link {
+    font-size: 2rem; 
+  }
+  /* Hamburger Icon Morphs into an 'X' */
+  .hamburger.active .bar:nth-child(2) { 
+    opacity: 0; 
+  }
+  .hamburger.active .bar:nth-child(1) { 
+    transform: translateY(8px) rotate(45deg); 
+  }
+  .hamburger.active .bar:nth-child(3) { 
+    transform: translateY(-8px) rotate(-45deg); 
   }
 }
