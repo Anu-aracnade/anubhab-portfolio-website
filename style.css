@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 .bg-video {
   position: fixed;
   top: 0;
@@ -153,6 +156,9 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width:100%;
+  margin: 0px;
+  padding: 50px 32px 0px;
 }
 .hero_details_whole {
   padding: 32px;
@@ -209,7 +215,8 @@ nav ul li {
 
 /* -----About Me Section----- */
 .About {
-  padding: 450px 32px 32px;
+  margin: 350px 0px 100px;
+  padding: 64px 32px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -223,10 +230,12 @@ nav ul li {
 }
 /* -----Skills Section------ */
 .Skills {
-  padding: 120px 32px 32px;
+  margin: 100px 0px 100px;
+  padding: 64px 32px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 .skills_grid_list {
   padding-bottom: 64px;
@@ -287,7 +296,8 @@ nav ul li {
 
 /* -----Projects----- */
 .Projects {
-  padding-top: 100px;
+ margin: 100px 0px 100px;
+  padding: 38px 32px 0px;
 }
 .Projects div ul {
   padding: 0px 32px;
@@ -320,7 +330,7 @@ nav ul li {
 /* -----Comtacts----- */
 .contacts {
   margin-top: 100px;
-  padding: 100px 15%;
+  padding: 85px;
   display: flex;
   flex-direction: row;
   column-gap: 40px;
