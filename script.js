@@ -43,4 +43,38 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden-element');
 hiddenElements.forEach((el) => observer.observe(el));
 
+/* --------Gmail-Button-Copy-Effect--------- */
+document.getElementById('GMAIL_BUTTON_ID').addEventListener('click', function(e) {
+  // 1. Stop the browser from instantly opening the mail client
+  e.preventDefault(); 
+  
+  const email = "anubhab01.aracnade@gmail.com";
+  const copyIcon = document.getElementById('copyIcon');
+  const checkIcon = document.getElementById('checkIcon');
+
+  // 2. Copy the email address to the user's clipboard
+  navigator.clipboard.writeText(email).then(() => {
+    
+    // 3. Swap the copy icon with the tick icon
+    if (copyIcon && checkIcon) {
+      copyIcon.style.setProperty('display', 'none', 'important');
+      checkIcon.style.setProperty('display', 'inline-block', 'important');
+    }
+
+    // 4. Wait 800 milliseconds so the user sees the tick, then redirect
+    setTimeout(() => {
+      window.location.href = "mailto:" + email;
+      
+      // 5. Reset icons back to normal in case the user returns to webpage
+      if (copyIcon && checkIcon) {
+        copyIcon.style.removeProperty('display');
+        checkIcon.style.setProperty('display', 'none', 'important');
+      }
+    }, 800);
+  }).catch(err => {
+    // Fallback if the user's browser blocks clipboard access
+    console.error('Failed to copy text: ', err);
+    window.location.href = "mailto:" + email;
+  });
+});
 

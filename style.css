@@ -612,3 +612,38 @@ body.no-scroll {
     transform: none;
   }
 }
+/* --------Gmail-Button-Copy-Effect--------- */
+/* 1. Ensure the button layout can handle the swap layout smoothly */
+.your-existing-button-class {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Style your text and icons for a smooth transition */
+.your-existing-button-class .btn-text,
+.your-existing-button-class .btn-icons {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* 3. Hide the icons by default and position them absolutely inside the button */
+.your-existing-button-class .btn-icons {
+  position: absolute ;
+  padding-left:12px;
+  opacity: 0;
+  transform: translateY(20px); /* Pushes icon down out of view initially */
+}
+
+/* 4. ON HOVER: Hide the "Gmail" text by lifting it up */
+.your-existing-button-class:hover .btn-text {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* 5. ON HOVER: Pull the icons up into the center of the button */
+.your-existing-button-class:hover .btn-icons {
+  opacity: 1;
+  transform: translateY(0);
+}
