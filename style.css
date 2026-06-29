@@ -199,20 +199,6 @@ nav ul li {
   display: block;
   border-radius: 8px;
 }
-/* ----- New scroll-effect property------ We will use JAVA-script(better-approach) to do this later
-.glideUp_scroll_effect {
-  animation: glideUp linear both;
-  animation-timeline: scroll(root); ----  Links animation to the page scroll 
-  animation-range: entry 0% exit 100%; ---- Plays while entering and leaving viewport 
-}*/
-/* @keyframes glideUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateX(-80px);
-  }
-} */
 
 /* -----About Me Section----- */
 .About {
@@ -601,5 +587,28 @@ body.no-scroll {
   }
   .hamburger.active .bar:nth-child(3) { 
     transform: translateY(-8px) rotate(-45deg); 
+  }
+}
+
+/*----------------------Smooth-SlideUp-Scroll-Effect------------------------- */
+/* The initial invisible state */
+.hidden-element {
+  opacity: 0;
+  transform: translateY(50px); /* Pushes the element down by 50px */
+  transition: all 0.8s ease-out; /* Controls the smooth animation speed */
+}
+
+/* The state triggered when scrolled into view */
+.hidden-element.show {
+  opacity: 1;
+  transform: translateY(0); /* Pulls the element up to its original spot */
+}
+
+/* Optional: Respect users who disable animations for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hidden-element {
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 }
