@@ -566,7 +566,7 @@ body.no-scroll {
   }
   .nav_setting {
     position: fixed; 
-    padding:0;
+    font-family:"Cormorant";
     margin: 0;
     top: -100vh; /* Keeps menu hidden above the viewport */
     left: 0;
