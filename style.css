@@ -661,3 +661,11 @@ body.no-scroll {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*-------------Git-Link-Icon-Position-Change_inDesktop-------------*/
+@media (min-width: 768px) {
+  .icon_git_link {
+    position: absolute;
+    top:12px;
+}
+}
