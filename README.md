@@ -11,26 +11,32 @@ This portfolio represents my learning journey in web development and acts as a c
 
 ## 📸 Preview
 
-<div style="display: flex; align-items: center; gap: 10px;">
-  <div>
-    <p align="center"><b>Desktop Preview</b></p>
-    <img src="assets\Screenshot(657).png" width="400" alt="Desktop View">
-  </div>
-  <div>
-    <p align="center"><b>Mobile Preview</b></p>
-    <img src="assets\Screenshot_2026-07-05-17-21-32-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="120" alt="Mobile View">
-  </div>
-</div>
-<div style="display: flex; align-items: center; gap: 10px;">
-  <div>
-    <p align="center"><b>Desktop Preview</b></p>
-    <img src="assets\Screenshot(661).png" width="400" alt="Desktop View">
-  </div>
-  <div>
-    <p align="center"><b>Mobile Preview</b></p>
-    <img src="assets\Screenshot_2026-07-05-18-02-33-25_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="120" alt="Mobile View">
-  </div>
-</div>
+<table width="100%">
+  <tr>
+    <td width="65%" align="center" valign="top">
+      <p><b>Desktop Preview</b></p>
+      <img src="assets\Screenshot(657).png" width="100%" alt="Desktop View">
+    </td>
+    <td width="20%" align="center" valign="top">
+      <p><b>Mobile Preview</b></p>
+      <img src="assets\Screenshot_2026-07-05-17-21-32-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" alt="Mobile View">
+    </td>
+  </tr>
+</table>
+
+<table width="100%">
+  <tr>
+    <td width="65%" align="center" valign="top">
+      <p><b>Desktop Preview</b></p>
+      <img src="assets\Screenshot(661).png" width="100%" alt="Desktop View">
+    </td>
+    <td width="20%" align="center" valign="top">
+      <p><b>Mobile Preview</b></p>
+      <img src="assets\Screenshot_2026-07-05-18-02-33-25_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" alt="Mobile View">
+    </td>
+  </tr>
+</table>
+
 
 ## ✨ Features
 
