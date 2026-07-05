@@ -1,4 +1,4 @@
-# 😁Personal Portfolio Website
+# Personal Portfolio Website
 
 A modern, responsive personal portfolio website built to showcase my skills, projects, education, and journey as a Computer Science student and aspiring developer.
 
@@ -67,6 +67,7 @@ portfolio-website/
 ├── style.css
 ├── script.js
 ├── assets/
+│   ├── fevicons/
 │   ├── images/
 │   └── videos/
 └── README.md
@@ -152,4 +153,4 @@ LinkedIn: https://linkedin.com/in/anubhab-p-7bbb3b365
    
 ---
 
-⭐ If you like this project, consider giving it a star! 😁
+⭐ If you like this project, consider giving it a star! 🤗
