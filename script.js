@@ -78,3 +78,10 @@ document.getElementById('GMAIL_BUTTON_ID').addEventListener('click', function(e)
   });
 });
 
+// ---------------Custom-Cursor-Effect----------------
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  // Use transform for much smoother performance than top/left
+  cursor.style.transform = `translate3d(${e.clientX - 10}px, ${e.clientY - 10}px, 0)`;
+});

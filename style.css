@@ -5,6 +5,7 @@
 }
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 .bg-video {
   position: fixed;
@@ -19,6 +20,7 @@ body {
   font-family: "Inter", sans-serif;
   color: rgb(255, 255, 255);
   line-height: 1.6;
+  cursor: none;
 }
 header {
   display: flex;
@@ -337,14 +339,14 @@ nav ul li {
   justify-content: space-between;
   width: 60%;
 }
-.icon_ani{
+.icon_ani {
   display: inline-block;
   transition: transform 0.3s ease;
 }
-.icon_ani:hover{
+.icon_ani:hover {
   transform: scale(1.3);
 }
-.icon_ani::after{
+.icon_ani::after {
   content: none !important;
 }
 
@@ -419,8 +421,8 @@ nav ul li {
   background-color: white;
   color: black;
 }
-.icon_git_link a::after{ 
-  content:none;
+.icon_git_link a::after {
+  content: none;
 }
 /* Target all mobile screens */
 @media screen and (max-width: 820px) {
@@ -445,7 +447,7 @@ nav ul li {
     display: flex !important;
     flex-direction: row !important;
     padding: 10px 6px 6px !important;
-  }  
+  }
   .hero {
     padding-top: 32px !important;
     display: flex !important;
@@ -460,7 +462,7 @@ nav ul li {
     max-width: 400px !important;
     margin-top: 24px !important;
   }
-  .About{
+  .About {
     margin-top: 100px !important;
   }
   .Skills {
@@ -481,7 +483,7 @@ nav ul li {
     text-align: center;
   }
   .Projects div ul {
-    width: 100%!important;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -563,44 +565,44 @@ body.no-scroll {
    MOBILE RESPONSIVE VIEW (768px & Smaller)
    ========================================== */
 @media (max-width: 768px) {
-  .hamburger { 
-    display: block; 
+  .hamburger {
+    display: block;
   }
   .nav_setting {
-    position: fixed; 
-    font-family:"Cormorant";
+    position: fixed;
+    font-family: "Cormorant";
     margin: 0;
     top: -100vh; /* Keeps menu hidden above the viewport */
     left: 0;
     width: 100vw;
-    height: 100vh; 
-    background-color: rgba(33, 33, 33, 0.98); 
+    height: 100vh;
+    background-color: rgba(33, 33, 33, 0.98);
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 99;
   }
   /* Drop-down trigger from the top */
-  .nav_setting.active { 
-    top: 0; 
+  .nav_setting.active {
+    top: 0;
   }
-  .nav-item { 
-    margin: 1.5rem 0; 
+  .nav-item {
+    margin: 1.5rem 0;
     margin-left: 0; /* Resets desktop margin spacing */
   }
   .nav-link {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
   /* Hamburger Icon Morphs into an 'X' */
-  .hamburger.active .bar:nth-child(2) { 
-    opacity: 0; 
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
-  .hamburger.active .bar:nth-child(1) { 
-    transform: translateY(8px) rotate(45deg); 
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
-  .hamburger.active .bar:nth-child(3) { 
-    transform: translateY(-8px) rotate(-45deg); 
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
@@ -639,13 +641,15 @@ body.no-scroll {
 /* 2. Style your text and icons for a smooth transition */
 .your-existing-button-class .btn-text,
 .your-existing-button-class .btn-icons {
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 /* 3. Hide the icons by default and position them absolutely inside the button */
 .your-existing-button-class .btn-icons {
-  position: absolute ;
-  padding-left:12px;
+  position: absolute;
+  padding-left: 12px;
   opacity: 0;
   transform: translateY(20px); /* Pushes icon down out of view initially */
 }
@@ -666,6 +670,24 @@ body.no-scroll {
 @media (min-width: 768px) {
   .icon_git_link {
     position: absolute;
-    top:12px;
+    top: 12px;
+  }
 }
+
+/* ------------Desktop-Cursor-Effect------------ */
+@media (min-width: 768px) {
+  .custom-cursor {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevents the cursor from blocking clicks */
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%); /* Centers the circle on the pointer */
+    transition: transform 0.1s ease-out; /* Adds a tiny bit of smoothness */
+  }
 }
