@@ -46,10 +46,14 @@ header {
 }
 .Brand_Icon_container a::after {
   content: none;
+  align-items: center;
+}
+.Brand_Icon_container {
+  padding-top: 3px;
 }
 .my_icon {
   width: auto;
-  height: 46px;
+  height: 37px;
   border-radius: 9px;
   transition: transform 0.3s ease;
 }
