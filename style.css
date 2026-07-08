@@ -38,6 +38,24 @@ header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+.self-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+}
+.Brand_Icon_container a::after {
+  content: none;
+}
+.my_icon {
+  width: auto;
+  height: 46px;
+  border-radius: 9px;
+  transition: transform 0.3s ease;
+}
+.my_icon:hover {
+  transform: scale(1.3);
+}
 h1 {
   font-family: "Permanent Marker", "Poppins", "Segoe UI";
   font-size: 55px;
