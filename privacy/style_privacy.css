@@ -1,0 +1,22 @@
+/* ==========================================
+   Privacy-Page-Styling
+   ========================================== */
+.pri_hero {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.pri_contain_1 {
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+}
+.pri_contain_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 63%;
+  gap: 16px;
+}
