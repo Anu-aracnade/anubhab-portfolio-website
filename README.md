@@ -15,11 +15,11 @@ This portfolio represents my learning journey in web development and acts as a c
   <tr>
     <td width="65%" align="center" valign="top">
       <p><b>Desktop Preview</b></p>
-      <img src="assets/Screenshot(657).png" width="100%" alt="Desktop View">
+      <img src="assets/Screenshot_(666).png" width="100%" alt="Desktop View">
     </td>
     <td width="20%" align="center" valign="top">
       <p><b>Mobile Preview</b></p>
-      <img src="assets/Screenshot_2026-07-05-17-21-32-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" alt="Mobile View">
+      <img src="assets/Screenshot_2026-07-10-14-36-58-25_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" alt="Mobile View">
     </td>
   </tr>
 </table>
@@ -28,11 +28,11 @@ This portfolio represents my learning journey in web development and acts as a c
   <tr>
     <td width="65%" align="center" valign="top">
       <p><b>Desktop Preview</b></p>
-      <img src="assets/Screenshot(661).png" width="100%" alt="Desktop View">
+      <img src="assets/Screenshot_(667).png" width="100%" alt="Desktop View">
     </td>
     <td width="20%" align="center" valign="top">
       <p><b>Mobile Preview</b></p>
-      <img src="assets/Screenshot_2026-07-05-18-02-33-25_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" alt="Mobile View">
+      <img src="assets/Screenshot_2026-07-10-14-37-25-43_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" alt="Mobile View">
     </td>
   </tr>
 </table>
