@@ -111,7 +111,7 @@ form.addEventListener('submit', function(e) {
   const json = JSON.stringify(object);
 
   // 4. Dispatch the transmission payload to the Web3Forms secure gateway
-  fetch('https://web3forms.com', {
+  fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
