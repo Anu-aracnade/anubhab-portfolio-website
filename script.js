@@ -85,3 +85,62 @@ document.addEventListener('mousemove', (e) => {
   // Use transform for much smoother performance than top/left
   cursor.style.transform = `translate3d(${e.clientX - 10}px, ${e.clientY - 10}px, 0)`;
 });
+
+// ================================================================================
+// -------------Contact-Form-Web3form-Client-Side-Submit-Confirmation-------------
+// ================================================================================
+const form = document.getElementById('contact-form');
+const result = document.getElementById('form-result');
+const submitBtn = document.getElementById('submit-btn');
+
+// 1. TARGET THE INTERNAL PARAGRAPH ELEMENT TO PRESERVE BUTTON DIMENSIONS
+const buttonTextEl = submitBtn.querySelector('.button_text');
+const originalButtonText = buttonTextEl.innerText; // Stores "Submit"
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevents the traditional page reload behavior!
+  
+  // 2. Enter the loading state without breaking layout tags
+  submitBtn.disabled = true;
+  buttonTextEl.innerText = "Sending..."; 
+  result.style.display = "none"; 
+  
+  // 3. Package the HTML form elements directly into an optimized JSON payload
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  // 4. Dispatch the transmission payload to the Web3Forms secure gateway
+  fetch('https://web3forms.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let res = await response.json();
+            if (response.status == 200) {
+                result.style.display = "block";
+                result.style.color = "#10B981"; 
+                result.innerHTML = "Thank you! Your message has been sent successfully.";
+                form.reset(); 
+            } else {
+                result.style.display = "block";
+                result.style.color = "#EF4444";
+                result.innerHTML = res.message || "Something went wrong. Please try again.";
+            }
+        })
+        .catch(error => {
+            result.style.display = "block";
+            result.style.color = "#EF4444";
+            result.innerHTML = "Network error. Please check your connection and try again.";
+        })
+        .then(function() {
+            // 5. RESTORE ORIGINAL BUTTON TEXT PERFECTLY
+            submitBtn.disabled = false;
+            buttonTextEl.innerText = originalButtonText; 
+        });
+});
+

@@ -257,7 +257,7 @@
               </div>
             </div>
             <div class="icon_git_link" style="padding: 8px">
-              <a href="https://github.com/Anu-aracnade/anubhab-portfolio-website" data-umami-event="Click GitHub Portfolio Repo Link">
+              <a href="https://github.com/Anu-aracnade/anubhab-portfolio-website" data-umami-event="Click GitHub Portfolio Repo Link" target="_blank" rel="noopener noreferrer">
                 <span><i class="fa-brands fa-square-github fa-2xl icon_ani"></i></span>
               </a>
             </div>
@@ -291,7 +291,7 @@
               </div>
             </div>
              <div class="icon_git_link" style="padding: 8px">
-              <a href="https://github.com/Anu-aracnade/MindAnchor" data-umami-event="Click GitHub MindAnchor Repo Link">
+              <a href="https://github.com/Anu-aracnade/MindAnchor" data-umami-event="Click GitHub MindAnchor Repo Link" target="_blank" rel="noopener noreferrer">
                 <span><i class="fa-brands fa-square-github fa-2xl icon_ani"></i></span>
               </a>
             </div>
@@ -316,12 +316,12 @@
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/anubhab-p-7bbb3b365" data-umami-event="Click LinkedIn Profile" class="icon_ani">
+              <a href="https://linkedin.com/in/anubhab-p-7bbb3b365" data-umami-event="Click LinkedIn Profile" class="icon_ani" target="_blank" rel="noopener noreferrer">
                 <span><i class="fa-brands fa-linkedin fa-xl"></i></span>
               </a>
             </li>
             <li>
-              <a href="https://github.com/Anu-aracnade" data-umami-event="Click GitHub Profile" class="icon_ani">
+              <a href="https://github.com/Anu-aracnade" data-umami-event="Click GitHub Profile" class="icon_ani" target="_blank" rel="noopener noreferrer">
                 <span><i class="fa-brands fa-github fa-xl"></i></span>
               </a>
             </li>
@@ -340,26 +340,28 @@
         </div>
       </div>
       <div class="viewer_details hidden-element">
-        <form action="" novalidate>
-          <div>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="8909ee6c-b4ee-4ded-84d9-c0e3951ef2c8">
+          <div class="form-group">
             <label for="viewer_name">Name</label>
-            <input type="text" name="name" id="contact-name" placeholder="Your name" />
+            <input type="text" name="name" id="name" placeholder="Your name" required/>
           </div>
-          <div>
+          <div class="form-group">
             <label for="viewer_email">Email</label>
-            <input type="text" name="email" id="email-address" placeholder="you@domain" />
+            <input type="email" name="email" id="email" placeholder="you@domain" required/>
           </div>
-          <div>
+          <div class="form-group">
             <label for="viewer_project">Your Project</label>
-            <textarea name="message" id="project_message" placeholder="Tell me about your project"></textarea>
+            <textarea name="message" id="project" placeholder="Tell me about your project" required></textarea>
           </div>
           <div>
-            <button type="submit">
+            <button type="submit" id="submit-btn">
               <div>
                 <p class="button_text">Submit</p>
               </div>
             </button>
           </div>
+          <div id="form-result" style="margin-top: 15px; font-weight: 600; display: none;"></div>
         </form>
       </div>
     </section>
@@ -379,8 +381,8 @@
             <i id="checkIcon" class="fa-solid fa-check" style="display: none;"></i>
           </span>
         </a>
-        <a href="https://linkedin.com/in/anubhab-p-7bbb3b365" data-umami-event="Click LinkedIn Profile">LinkedIn</a>
-        <a href="https://github.com/Anu-aracnade" data-umami-event="Click GitHub Profile">GitHub</a>
+        <a href="https://linkedin.com/in/anubhab-p-7bbb3b365" data-umami-event="Click LinkedIn Profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Anu-aracnade" data-umami-event="Click GitHub Profile" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>
