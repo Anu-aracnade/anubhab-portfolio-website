@@ -70,6 +70,11 @@ portfolio-website/
 │   ├── fevicons/
 │   ├── images/
 │   └── videos/
+├── privacy/
+│   ├── privacy.html
+│   ├── style_privacy.css
+│   └── script_privacy.js
+├── LICENCE
 └── README.md
 ```
 
