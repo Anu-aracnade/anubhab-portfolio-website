@@ -2,5 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap:
-https://anu-aracnade.github.io/anubhab-portfolio-website/sitemap.xml
+Sitemap: https://anu-aracnade.github.io/anubhab-portfolio-website/sitemap.xml
